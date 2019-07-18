@@ -23,11 +23,11 @@ public class EchoSocketServer {
             if (scanner.hasNext()) {
                 String content = scanner.next();
                 System.out.println("[from client]" + content);
-                if ("exit".equalsIgnoreCase(content)) {
-                    ps.println("[server] bye bye ~");
+                if (content.startsWith("exit")) {
+                    ps.println("bye bye ~");
+                    ps.flush();
                     flag = false;
                 } else {
-                    System.out.println("[client] " + content);
                     ps.println("received message: " + content); // 通知客户端已收到消息
                     ps.flush(); // 刷新输出流，立刻写回客户端
                 }
