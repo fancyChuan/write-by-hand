@@ -4,7 +4,7 @@ import cn.fancychuan.common.IGpHello;
 
 public class GpHelloImpl implements IGpHello {
 
-    @Override
+    //@Override
     public String sayHello(String msg) {
         return null;
     }

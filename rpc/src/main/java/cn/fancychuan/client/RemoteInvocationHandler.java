@@ -15,7 +15,7 @@ public class RemoteInvocationHandler implements InvocationHandler {
         this.port = port;
     }
 
-    @Override
+    // @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         RpcRequest request = new RpcRequest();
         request.setClassName(method.getDeclaringClass().getName());
